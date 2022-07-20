@@ -1,0 +1,79 @@
+{
+  "livros": [
+    {
+      "nome": "Pantera-Cor-de-Pau",
+      "categoria": "Sci-fi",
+      "editora": "Hednaldo prodções",
+      "autor": "Clodoaldo",
+      "id": 1
+    }
+  ],
+  "editoras": [
+    {
+      "nome": "Jefferson produções",
+      "id": 1
+    },
+    {
+      "nome": "Hednaldo prodções",
+      "id": 2
+    },
+    {
+      "nome": "Dougras Produções",
+      "id": 3
+    },
+    {
+      "nome": "BYll Gatis Produções",
+      "id": 4
+    }
+  ],
+  "categorias": [
+    {
+      "nome": "Horror",
+      "id": 1
+    },
+    {
+      "nome": "Sci-fi",
+      "id": 2
+    },
+    {
+      "nome": "Aventura",
+      "id": 3
+    },
+    {
+      "nome": "Drama",
+      "id": 4
+    },
+    {
+      "nome": "Comédia",
+      "id": 5
+    },
+    {
+      "nome": "Isekai",
+      "id": 6
+    }
+  ],
+  "autores": [
+    {
+      "nome": "Clodoaldo",
+      "descricao": "Ñ sei",
+      "id": 1
+    },
+    {
+      "nome": "Reginaldo",
+      "descricao": "Ñ sei",
+      "id": 2
+    },
+    {
+      "nome": "Lukas",
+      "id": 3
+    },
+    {
+      "nome": "Ornamento da Silva",
+      "id": 4
+    },
+    {
+      "nome": "Espada Calibrada em10ATM",
+      "id": 5
+    }
+  ]
+}

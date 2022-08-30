@@ -57,7 +57,7 @@ export default {
       <tbody>
         <tr v-for="categoria in categorias" :key="categoria.id">
           <td>{{ categoria.nome }}</td>
-          <td> {{ categoria.descricao }}</td>
+          <td>{{ categoria.descricao }}</td>
           <td>
             <button @click="excluir(categoria)">Excluir</button>
             <button @click="editar(categoria)">Editar</button>

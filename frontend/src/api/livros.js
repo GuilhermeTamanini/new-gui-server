@@ -4,22 +4,22 @@ export default class LivrosApi {
     const response = await axios.get('http://localhost:4000/livros');
     return response.data;
   }
-  async buscarLivros(id) {
+  async buscarLivro(id) {
     const response = await axios.get(`http://localhost:4000/livros/${id}`);
     return response.data;
   }
-  async adicionarLivros(livros) {
-    const response = await axios.post('http://localhost:4000/livros', livros);
+  async adicionarLivro(livro) {
+    const response = await axios.post('http://localhost:4000/livros', livro);
     return response.data;
   }
-  async excluirLivros(id) {
+  async excluirLivro(id) {
     const response = await axios.delete(`http://localhost:4000/livros/${id}`);
     return response.data;
   }
-  async atualizarLivros(livros) {
+  async atualizarLivros(livro) {
     const response = await axios.put(
-      `http://localhost:4000/livros/${livros.id}`,
-      livros,
+      `http://localhost:4000/livros/${livro.id}`,
+      livro,
     );
     return response.data;
   }

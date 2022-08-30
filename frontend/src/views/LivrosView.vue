@@ -1,17 +1,17 @@
 <script>
-import axios from "axios"
+import axios from "axios";
 export default {
   data() {
     return {
-      livro: {},
+      livros: [],
       categorias: [],
       autores: [],
       // preco: [],
       editoras: [],
-      livros: [],
+      livro: {},
     };
   },
-    async created() {
+  async created() {
     await this.buscarTodosOsLivros();
     await this.buscarTodasAsCategorias();
     await this.buscarTodasAsEditoras();
@@ -35,9 +35,14 @@ export default {
       this.livros = livros.data;
     },
     async salvar() {
-        await axios.post("http://localhost:4000/livros", this.livro);
-        await axios.buscarTodosOsLivros();
-      },
+      await axios.post("http://localhost:4000/livros", this.livro);
+      await this.buscarTodosOsLivros();
+    },
+    async excluir(livro) {
+      await axios.delete(`http://localhost:4000/livros/${livro.id}`);
+      const indice = this.livros.indexOf(livro);
+      this.livros.splice(indice, 1)
+    }
   },
 };
 </script>
@@ -46,20 +51,17 @@ export default {
     <div class="title"></div>
   </div>
   <div class="form-input">
-    <input
-      type="text"
-      placeholder="Nome do livro"
-      v-model="livro.nome"
-    />
+    <input type="text" placeholder="Nome do livro" v-model="livro.nome" />
     <select
       class="form-select"
       aria-label="Default select example"
       v-model="livro.categoria"
     >
-      <option 
+      <option
         v-for="categoria in categorias"
         :key="categoria.id"
-        :value="categoria.nome">
+        :value="categoria.nome"
+      >
         {{ categoria.nome }}
       </option>
     </select>
@@ -68,17 +70,21 @@ export default {
       aria-label="Default select example"
       v-model="livro.editora"
     >
-      <option v-for="editora in editoras" :key="editora.id" :value="editora.nome">
-      {{ editora.nome}}
+      <option
+        v-for="editora in editoras"
+        :key="editora.id"
+        :value="editora.nome"
+      >
+        {{ editora.nome }}
       </option>
     </select>
-<select
+    <select
       class="form-select"
       aria-label="Default select example"
       v-model="livro.autor"
     >
       <option v-for="autor in autores" :key="autor.id" :value="autor.nome">
-      {{ autor.nome}}
+        {{ autor.nome }}
       </option>
     </select>
     <!-- <input type="number" placeholder="Insira o preço" v-model="preco" /> -->
@@ -92,19 +98,18 @@ export default {
           <th scope="col">Categoria</th>
           <th scope="col">Editora</th>
           <th scope="col">Autor</th>
-          <th scope="col">Preço</th>
-          <th id="excluir" scope="col">Excluir</th>
+          <th id="excluir" scope="col">Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="livro in livros" :key="livro.id">
           <td>{{ livro.nome }}</td>
-          <td>{{ livro.categoria}}</td>
+          <td>{{ livro.categoria }}</td>
           <td>{{ livro.autor }}</td>
           <td>{{ livro.editora }}</td>
           <!-- <td>R${{ livro.preco }}</td> -->
           <td>
-            <button @click="excluir(livro)">Excluir</button>
+            <button class="btn btn-fff btn-sm" @click="excluir(livro)">Excluir</button>
           </td>
         </tr>
       </tbody>
@@ -112,14 +117,14 @@ export default {
   </div>
 </template>
 <style>
-#excluir {
-  padding-left: 15px;
-}
-.table {
-  background-color: white;
-}
-td button{
-  background-color: rgb(221, 220, 220);
-  border-radius: 20px;
-}
+  #excluir {
+    padding-left: 15px;
+  }
+  .table {
+    background-color: white;
+  }
+  td button {
+    background-color: rgb(221, 220, 220);
+    border-radius: 20px;
+  }
 </style>

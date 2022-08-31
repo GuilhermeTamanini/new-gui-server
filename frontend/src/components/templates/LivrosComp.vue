@@ -29,7 +29,7 @@
     </div>
     <div class="livro4">
       <img
-        src="https://www.editorajuspodivm.com.br/cdn/imagens/produtos/original/matematica-basica-definitiva-para-concursos-2021-006f.png"
+        src="https://www.editorajuspodivm.com.br/media/catalog/product/J/U/JUS1394.png"
         alt=""
       />
       <p>Matemática básica definitiva</p>
@@ -53,7 +53,7 @@
   <div class="livros2">
     <div class="livro7">
       <img
-        src="https://www.editorajuspodivm.com.br/cdn/imagens/produtos/original/lingua-portuguesa-para-concursos-2021-bd2e.png"
+        src="https://www.editorajuspodivm.com.br/media/catalog/product/J/U/JUS1458.png"
         alt=""
       />
       <p>Língua Portuguesa</p>

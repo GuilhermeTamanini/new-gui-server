@@ -19,27 +19,27 @@ export default {
   },
   methods: {
     async buscarTodasAsCategorias() {
-      const categorias = await axios.get("http://localhost:4000/categorias");
+      const categorias = await axios.get("https://livraria-server.herokuapp.com/categorias");
       this.categorias = categorias.data;
     },
     async buscarTodasAsEditoras() {
-      const editoras = await axios.get("http://localhost:4000/editoras");
+      const editoras = await axios.get("https://livraria-server.herokuapp.com/editoras");
       this.editoras = editoras.data;
     },
     async buscarTodosOsAutores() {
-      const autores = await axios.get("http://localhost:4000/autores");
+      const autores = await axios.get("https://livraria-server.herokuapp.com/autores");
       this.autores = autores.data;
     },
     async buscarTodosOsLivros() {
-      const livros = await axios.get("http://localhost:4000/livros");
+      const livros = await axios.get("https://livraria-server.herokuapp.com/livros");
       this.livros = livros.data;
     },
     async salvar() {
-      await axios.post("http://localhost:4000/livros", this.livro);
+      await axios.post("https://livraria-server.herokuapp.com/livros", this.livro);
       await this.buscarTodosOsLivros();
     },
     async excluir(livro) {
-      await axios.delete(`http://localhost:4000/livros/${livro.id}`);
+      await axios.delete(`https://livraria-server.herokuapp.com/livros/${livro.id}`);
       const indice = this.livros.indexOf(livro);
       this.livros.splice(indice, 1)
     }

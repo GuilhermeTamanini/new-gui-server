@@ -57,11 +57,14 @@ export default {
           <td>{{ autor.nome }}</td>
           <td>{{ autor.descricao }}</td>
           <td>
-            <button @click="excluir(autor)">Excluir</button>
-            <button @click="editar(autor)">Editar</button>
+            <button class="btn btn-fff btn-sm" @click="excluir(autor)">Excluir</button>
+            <button class="btn btn-fff btn-sm" @click="editar(autor)">Editar</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
+<style>
+  
+</style>

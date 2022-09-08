@@ -1,50 +1,63 @@
 <script>
-import axios from "axios";
-export default {
-  data() {
-    return {
-      livros: [],
-      categorias: [],
-      autores: [],
-      // preco: [],
-      editoras: [],
-      livro: {},
-    };
-  },
-  async created() {
-    await this.buscarTodosOsLivros();
-    await this.buscarTodasAsCategorias();
-    await this.buscarTodasAsEditoras();
-    await this.buscarTodosOsAutores();
-  },
-  methods: {
-    async buscarTodasAsCategorias() {
-      const categorias = await axios.get("https://livraria-server.herokuapp.com/categorias");
-      this.categorias = categorias.data;
+  import axios from "axios";
+  export default {
+    data() {
+      return {
+        livros: [],
+        categorias: [],
+        autores: [],
+        // preco: [],
+        editoras: [],
+        livro: {},
+      };
     },
-    async buscarTodasAsEditoras() {
-      const editoras = await axios.get("https://livraria-server.herokuapp.com/editoras");
-      this.editoras = editoras.data;
-    },
-    async buscarTodosOsAutores() {
-      const autores = await axios.get("https://livraria-server.herokuapp.com/autores");
-      this.autores = autores.data;
-    },
-    async buscarTodosOsLivros() {
-      const livros = await axios.get("https://livraria-server.herokuapp.com/livros");
-      this.livros = livros.data;
-    },
-    async salvar() {
-      await axios.post("https://livraria-server.herokuapp.com/livros", this.livro);
+    async created() {
       await this.buscarTodosOsLivros();
+      await this.buscarTodasAsCategorias();
+      await this.buscarTodasAsEditoras();
+      await this.buscarTodosOsAutores();
     },
-    async excluir(livro) {
-      await axios.delete(`https://livraria-server.herokuapp.com/livros/${livro.id}`);
-      const indice = this.livros.indexOf(livro);
-      this.livros.splice(indice, 1)
-    }
-  },
-};
+    methods: {
+      async buscarTodasAsCategorias() {
+        const categorias = await axios.get(
+          "https://livraria-server.herokuapp.com/categorias"
+        );
+        this.categorias = categorias.data;
+      },
+      async buscarTodasAsEditoras() {
+        const editoras = await axios.get(
+          "https://livraria-server.herokuapp.com/editoras"
+        );
+        this.editoras = editoras.data;
+      },
+      async buscarTodosOsAutores() {
+        const autores = await axios.get(
+          "https://livraria-server.herokuapp.com/autores"
+        );
+        this.autores = autores.data;
+      },
+      async buscarTodosOsLivros() {
+        const livros = await axios.get(
+          "https://livraria-server.herokuapp.com/livros"
+        );
+        this.livros = livros.data;
+      },
+      async salvar() {
+        await axios.post(
+          "https://livraria-server.herokuapp.com/livros",
+          this.livro
+        );
+        await this.buscarTodosOsLivros();
+      },
+      async excluir(livro) {
+        await axios.delete(
+          `https://livraria-server.herokuapp.com/livros/${livro.id}`
+        );
+        const indice = this.livros.indexOf(livro);
+        this.livros.splice(indice, 1);
+      },
+    },
+  };
 </script>
 <template>
   <div class="container">
@@ -109,22 +122,23 @@ export default {
           <td>{{ livro.editora }}</td>
           <!-- <td>R${{ livro.preco }}</td> -->
           <td>
-            <button class="btn btn-fff btn-sm" @click="excluir(livro)">Excluir</button>
+            <button class="btn btn-fff btn-sm" @click="excluir(livro)">
+              Excluir
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
-<style>
-  #excluir {
-    padding-left: 15px;
-  }
-  .table {
-    background-color: white;
-  }
-  td button {
-    background-color: rgb(221, 220, 220);
-    border-radius: 20px;
-  }
+<style scoped>
+#excluir {
+  padding-left: 15px;
+}
+.table {
+  background-color: white;
+}
+td button {
+  background-color: rgb(255, 255, 255);
+}
 </style>

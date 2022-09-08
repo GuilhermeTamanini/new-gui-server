@@ -47,7 +47,7 @@ body {
   background-color: rgb(255, 255, 255);
   font-weight: bold;
   color: rgb(0, 0, 0);
-  border: 1px solid white;
+ 
   border-radius: 10px;
   width: 15%;
   margin: 4px;
@@ -57,4 +57,35 @@ body {
   display: flex;
   justify-content: center;
   
+}
+form {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  justify-content: center;
+}
+.form-login {
+  color: white;
+  width: 850px;
+  height: 500px;
+}
+#form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cadastro1 {
+  padding-left: 600px;
+}
+.form-cadastro {
+  background-color: black;
+  color: white;
+  width: 850px;
+  height: 500px;
 }

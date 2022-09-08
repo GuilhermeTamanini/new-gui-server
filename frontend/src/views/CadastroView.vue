@@ -47,21 +47,5 @@ h2 {
   justify-content: center;
 
 }
-form {
-  background-color: black;
-  color: white;
-  padding: 15px;
-  border-radius: 20px;
-  justify-content: center;
-}
-.form-login {
-  color: white;
-  width: 850px;
-  height: 500px;
-}
-#form-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 </style>

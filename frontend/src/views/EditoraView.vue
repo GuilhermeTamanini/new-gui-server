@@ -58,8 +58,8 @@
           <td>{{ editora.id }}</td>
           <td>{{ editora.nome }}</td>
           <td>
-            <button @click="excluir(editora)">Excluir</button>
-            <button @click="editar(editora)">Editar</button>
+            <button class="btn btn-fff btn-sm" @click="excluir(editora)">Excluir</button>
+            <button class="btn btn-fff btn-sm" @click="editar(editora)">Editar</button>
           </td>
         </tr>
       </tbody>
@@ -69,9 +69,6 @@
 <style>
   .table {
     background-color: white;
-  }
-  td button {
-    background-color: rgb(187, 184, 184);
   }
   #table-editora {
     text-align: center;

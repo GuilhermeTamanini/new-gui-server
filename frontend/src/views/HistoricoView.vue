@@ -110,7 +110,7 @@ export default {
           <td>{{ cadastro.link }}</td>
           <td>{{ cadastro.data }}</td>
           <td>
-            <button @click="excluir(cadastro)">Excluir</button>
+            <button class="btn btn-fff btn-sm" @click="excluir(cadastro)">Excluir</button>
           </td>
         </tr>
       </tbody>

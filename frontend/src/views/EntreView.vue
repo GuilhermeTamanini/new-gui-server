@@ -52,18 +52,5 @@
   </div>
 </template>
 <style>
-#form-cadastro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cadastro1 {
-  padding-left: 600px;
-}
-.form-cadastro {
-  background-color: black;
-  color: white;
-  width: 850px;
-  height: 500px;
-}
+
 </style>

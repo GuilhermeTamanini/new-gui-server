@@ -60,10 +60,7 @@
   };
 </script>
 <template>
-  <div class="container">
-    <div class="title"></div>
-  </div>
-  <div class="form-input">
+  <div class="form-input form-dark">
     <input type="text" placeholder="Nome do livro" v-model="livro.nome" />
     <select
       class="form-select"
@@ -104,7 +101,7 @@
     <button @click="salvar">salvar</button>
   </div>
   <div class="list-items">
-    <table class="table table-striped">
+    <table class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">Nome</th>

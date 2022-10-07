@@ -46,7 +46,7 @@
     <button @click="salvar">salvar</button>
   </div>
   <div class="list-items">
-    <table id="table-editora" class="table table-striped">
+    <table id="table-editora" class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">Categorias</th>

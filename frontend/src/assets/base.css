@@ -6,17 +6,6 @@
   position: relative;
   font-weight: normal;
 }
-* img {
-  background-image: url(https://media.tenor.com/yf21-u5j-6MAAAAM/hang-in-there-you-can-do-it.gif);  
-  
-}
-* button{
-  background-image: url(https://media.tenor.com/yf21-u5j-6MAAAAM/hang-in-there-you-can-do-it.gif);
-  width: 220px;
-  height: 188px;
-  z-index: 1;
-}
-  
 
 body {
   min-height: 100vh;

@@ -60,7 +60,7 @@
   };
 </script>
 <template>
-  <div class="form-input form-dark">
+  <div class="form-input ">
     <input type="text" placeholder="Nome do livro" v-model="livro.nome" />
     <select
       class="form-select"

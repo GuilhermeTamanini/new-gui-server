@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <RouterLink class="navbar-brand" to="/cadastros"
-        ><img
-          src="https://www.intel.com.br/etc.clientlibs/settings/wcm/designs/intel/clientlibs/arkLibs/resources/img/PMP_Partner_Member_Card.png"
-          alt=""
+      <RouterLink class="navbar-brand" to="/cadastros">
+        <img
+          src="https://media.tenor.com/yf21-u5j-6MAAAAM/hang-in-there-you-can-do-it.gif"
+          alt="" 
       /></RouterLink>
       <RouterLink class="navbar-brand" to="/">Home</RouterLink>
       <button
